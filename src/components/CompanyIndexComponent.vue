@@ -1,12 +1,13 @@
-// IndexComponent.vue
 
 <template>
   <div>
-    <h1>Posts</h1>
+    <h1>Insurance Company</h1>
     <div class="row">
       <div class="col-md-10"></div>
       <div class="col-md-2">
-        <router-link :to="{ name: 'create' }" class="btn btn-primary">Create</router-link>
+        <router-link :to="{ name: 'create' }" class="btn btn-primary"
+          >Create</router-link
+        >
       </div>
     </div>
     <br />
@@ -16,6 +17,8 @@
         <tr>
           <th>Company</th>
           <th>Phone</th>
+          <th>Email</th>
+          <th>Address</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -48,28 +51,27 @@
 
 <script>
 export default {
-  
   data() {
     return {
       companies: []
     };
   },
-  
+
   created() {
     let uri = "http://localhost:8081/api/insurance";
     this.axios.get(uri).then(response => {
       this.companies = response.data;
     });
-  },
-
-  methods: {
-    deleteCompany(id)
-    {
-          let uri = `http://localhost:8081/posts/delete/${id}`;
-          this.axios.delete(uri).then(response => {
-          this.companies.splice(this.companies.indexOf(id), 1);
-      });
-    }
   }
+
+  // methods: {
+  //   deleteCompany(id)
+  //   {
+  //         let uri = `http://localhost:8081/company/delete/${id}`;
+  //         this.axios.delete(uri).then(response => {
+  //         this.companies.splice(this.companies.indexOf(id), 1);
+  //     });
+  //   }
+  // }
 };
 </script>

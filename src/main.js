@@ -14,8 +14,17 @@ Vue.config.productionTip = false
 
 import HomeComponent from './components/HomeComponent.vue';
 import CreateComponent from './components/CreateComponent.vue';
-import IndexComponent from './components/IndexComponent.vue';
 import EditComponent from './components/EditComponent.vue';
+
+
+
+import CompanyIndexComponent from './components/CompanyIndexComponent.vue';
+import InsuranceIndexComponent from './components/InsuranceIndexComponent.vue';
+import UserIndexComponent from './components/UserIndexComponent.vue';
+import VehicleIndexComponent from './components/VehicleIndexComponent.vue';
+
+
+
 
 const routes = [
   {
@@ -23,26 +32,49 @@ const routes = [
     path: '/',
     component: HomeComponent
   },
+
+  /*Company Information*/
   {
-      name: 'create',
-      path: '/create',
-      component: CreateComponent
+    name: 'Companies',
+    path: '/insurance_companies',
+    component: CompanyIndexComponent
   },
+
+  /*Insurance Information*/
   {
-      name: 'posts',
-      path: '/posts',
-      component: IndexComponent
+    name: 'Insurances',
+    path: '/insurance_informations',
+    component: InsuranceIndexComponent
   },
+
+  /*User Information*/
   {
-      name: 'edit',
-      path: '/edit/:id',
-      component: EditComponent
+    name: 'Users',
+    path: '/personal_informations',
+    component: UserIndexComponent
+  },
+
+  /*Vehicle Information*/
+  {
+    name: 'Vehicles',
+    path: '/vehicle_informations',
+    component: VehicleIndexComponent
+  },
+
+  /*************************************/
+  {
+    name: 'Create',
+    path: '/create',
+    component: CreateComponent
+  },
+
+  {
+    name: 'edit',
+    path: '/edit/:id',
+    component: EditComponent
   }
 ]
 
 const router = new VueRouter({ mode: 'history', routes: routes });
 
-new Vue(Vue.util.extend({ router }, App)) .$mount('#app');
-// new Vue({
-//   render: h => h(App),
-// }).$mount('#app')
+new Vue(Vue.util.extend({ router }, App)).$mount('#app');

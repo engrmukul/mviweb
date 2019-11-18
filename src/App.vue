@@ -8,10 +8,16 @@
           <router-link to="/" class="nav-link">Home</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/create" class="nav-link">Create Post</router-link>
+          <router-link to="/insurance_companies" class="nav-link">Company</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/posts" class="nav-link">Posts</router-link>
+          <router-link to="/insurance_informations" class="nav-link">Insurance</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/personal_informations" class="nav-link">Registered User</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/vehicle_informations" class="nav-link">Vehicle</router-link>
         </li>
       </ul>
     </nav><br />
