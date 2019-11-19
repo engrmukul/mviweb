@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Insurance Company</h1>
+    <h1>Insuranced Vehicles</h1>
     <div class="row">
       <div class="col-md-10"></div>
     </div>

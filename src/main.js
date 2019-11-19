@@ -16,7 +16,7 @@ import HomeComponent from './components/HomeComponent.vue';
 import CreateComponent from './components/CreateComponent.vue';
 import EditComponent from './components/EditComponent.vue';
 
-
+import Login from "./components/LoginComponent.vue";
 
 import CompanyIndexComponent from './components/CompanyIndexComponent.vue';
 import InsuranceIndexComponent from './components/InsuranceIndexComponent.vue';
@@ -25,11 +25,15 @@ import VehicleIndexComponent from './components/VehicleIndexComponent.vue';
 
 
 
-
 const routes = [
   {
+    path: "/",
+    name: "Login",
+    component: Login
+  },
+  {
     name: 'home',
-    path: '/',
+    path: '/home',
     component: HomeComponent
   },
 
